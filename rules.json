@@ -4,8 +4,8 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {
-      "urlFilter": "googleads.g.doubleclick.net",
-      "resourceTypes": ["script", "xmlhttprequest"]
+      "urlFilter": "googletagmanager.com/gtag",
+      "resourceTypes": ["script"]
     }
   },
   {
@@ -13,8 +13,26 @@
     "priority": 1,
     "action": { "type": "block" },
     "condition": {
-      "urlFilter": "youtube.com/get_video_info?*adformat*",
-      "resourceTypes": ["xmlhttprequest"]
+      "urlFilter": "analytics.twitter.com",
+      "resourceTypes": ["image", "script"]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "connect.facebook.net/en_US/fbevents.js",
+      "resourceTypes": ["script"]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": { "type": "block" },
+    "condition": {
+      "urlFilter": "doubleclick.net",
+      "resourceTypes": ["xmlhttprequest", "script"]
     }
   }
 ]
