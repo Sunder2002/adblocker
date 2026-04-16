@@ -1,9 +1,15 @@
 {
   "manifest_version": 3,
   "name": "My Trusted AdBlock",
-  "version": "1.0",
-  "permissions": ["declarativeNetRequest", "storage"],
-  "host_permissions": ["*://*.youtube.com/*", "*://*.hotstar.com/*"],
+  "version": "1.5",
+  "permissions": [
+    "declarativeNetRequest", 
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*.youtube.com/*", 
+    "*://*.hotstar.com/*"
+  ],
   "declarative_net_request": {
     "rule_resources": [{
       "id": "ruleset_1",
@@ -13,8 +19,12 @@
   },
   "content_scripts": [
     {
-      "matches": ["*://*.youtube.com/*", "*://*.hotstar.com/*"],
-      "js": ["content.js"]
+      "matches": [
+        "*://*.youtube.com/*", 
+        "*://*.hotstar.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_start"
     }
   ]
 }
