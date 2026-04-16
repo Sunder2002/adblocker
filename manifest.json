@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "My Trusted AdBlock",
+  "version": "1.0",
+  "permissions": ["declarativeNetRequest", "storage"],
+  "host_permissions": ["*://*.youtube.com/*", "*://*.hotstar.com/*"],
+  "declarative_net_request": {
+    "rule_resources": [{
+      "id": "ruleset_1",
+      "enabled": true,
+      "path": "rules.json"
+    }]
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*", "*://*.hotstar.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
